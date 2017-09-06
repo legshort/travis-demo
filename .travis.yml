@@ -4,3 +4,7 @@ python:
 install: "pip install django"
 notifications:
   email: false
+provider: script
+  script: stating.sh
+  on:
+    branch: staging
