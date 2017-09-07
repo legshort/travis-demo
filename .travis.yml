@@ -7,10 +7,12 @@ notifications:
   email: false
 deploy:
   - provider: script
-    script: staging.sh
+    skip_cleanup: true
+    script: echo 'Deployed to Staging Server'
     on:
       branch: staging
   - provider: script
-    script: production.sh
+    skip_cleanup: true
+    script: echo 'Deployed to Production Server'
     on:
       branch: master
